@@ -1102,11 +1102,12 @@ TOURNAMENT_ITEMS = [
 ]
 
 def calc_stat(base, level, iv=31, ev=0, nature_mod=1.0, is_hp=False):
+    
     ev_contribution = ev // 4
     if is_hp:
         return (2 * base + iv + ev_contribution) * level // 100 + level + 10
     return int(((2 * base + iv + ev_contribution) * level // 100 + 5) * nature_mod)
- 
+
 def calc_exp(growth_rate, level):
     n = level
     gr = growth_rate.upper()
